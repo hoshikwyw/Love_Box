@@ -1,0 +1,89 @@
+// ─────────────────────────────────────────────────────────────────────────────
+//  ★ THE ONE FILE YOU EDIT ★
+//  Everything personal lives here. Fill in the ⟨TBD⟩ blanks. Nothing else needs
+//  to change to make this hers.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export type Person = {
+  name: string;
+  city: string;
+  /** IANA timezone id — handles DST correctly. Do NOT use a fixed offset. */
+  timezone: string;
+  /** Coordinates for the distance line + the map plane. [latitude, longitude] */
+  coords: [number, number];
+  /** Photo for the clock cards, e.g. "/memories/bee.jpg". Leave "" for a placeholder. */
+  photo: string;
+};
+
+export type Memory = {
+  /** Path under /public, e.g. "/memories/first-call.jpg". Leave "" for a placeholder. */
+  image: string;
+  date: string; // free text, e.g. "March 2025"
+  caption: string;
+};
+
+export const story = {
+  // ── The two of you ────────────────────────────────────────────────────────
+  her: {
+    name: "Bee",
+    city: "Bangkok",
+    timezone: "Asia/Bangkok", // UTC+7
+    coords: [13.7563, 100.5018],
+    photo: "", // ← drop her photo in /public (e.g. "/memories/bee.jpg") and put the path here
+  } as Person,
+
+  you: {
+    name: "kayv",
+    city: "Yangon",
+    timezone: "Asia/Yangon", // UTC+6:30
+    coords: [16.8409, 96.1735],
+    photo: "", // ← drop your photo in /public (e.g. "/memories/kayv.jpg") and put the path here
+  } as Person,
+
+  // ── The dates that matter ──────────────────────────────────────────────────
+  // When you became "official". Powers the days-together counter + unlocks the
+  // final card on each anniversary. Format: YYYY-MM-DD.
+  anniversary: "2026-04-28",
+
+  // The day you'll finally meet in person. Leave null for the hopeful
+  // "Soon — I'm working on it." state. Set to "YYYY-MM-DD" when you know.
+  meetingDate: null as string | null,
+
+  // ── Hero ───────────────────────────────────────────────────────────────────
+  hero: {
+    line: "I'd go to the moon and back for you.",
+    sub: "We haven't met yet. But we look at the same moon — and it's only 360 miles between us.",
+  },
+
+  // ── Your song (optional) ───────────────────────────────────────────────────
+  // Drop an mp3 in /public, e.g. "/our-song.mp3". Leave "" to hide the player.
+  // NEVER autoplay — there is a play button on purpose.
+  song: {
+    src: "",
+    title: "⟨song title⟩",
+    artist: "⟨artist⟩",
+  },
+
+  // ── Our FaceTime story ─────────────────────────────────────────────────────
+  memories: [
+    { image: "", date: "⟨month/year⟩", caption: "The first time I saw your face." },
+    { image: "", date: "⟨month/year⟩", caption: "The call where you fell asleep and I just watched you breathe." },
+    { image: "", date: "⟨month/year⟩", caption: "Good morning for me, goodnight for you." },
+    { image: "", date: "⟨month/year⟩", caption: "We watched the same movie, 360 miles apart." },
+  ] as Memory[],
+
+  // ── Reasons I love you (across the border) ─────────────────────────────────
+  reasons: [
+    "You stayed on call until 4am your time, just so I wasn't alone.",
+    "You make Bangkok feel close enough to touch.",
+    "You laugh at my jokes even through a laggy connection.",
+    "You said goodnight to the same moon I was looking at.",
+    "You chose me — across a border, across a screen — every single day.",
+  ],
+
+  // ── The locked card (unlocks on your anniversary) ──────────────────────────
+  lockedMessage:
+    "One day soon, the screen turns into your hand in mine. Until then — to the moon and back, and 360 miles is nothing. I'm coming to find you. 💫",
+};
+
+export type Story = typeof story;

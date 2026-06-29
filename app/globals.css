@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #03050f;
+  color: #cdd6ff;
+  -webkit-font-smoothing: antialiased;
+  /* Stop iOS Safari from inflating font sizes on rotate */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* No grey flash when she taps the cute buttons */
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Warm, dreamy night — rosy glow up top, soft blush at the bottom */
+body {
+  background:
+    radial-gradient(1100px 760px at 75% -8%, rgba(246, 165, 192, 0.28), transparent 60%),
+    radial-gradient(900px 620px at 12% 8%, rgba(167, 139, 250, 0.16), transparent 55%),
+    radial-gradient(1000px 700px at 50% 112%, rgba(246, 165, 192, 0.22), transparent 55%),
+    linear-gradient(180deg, #0e0a22 0%, #0a0719 55%, #070512 100%);
+  background-attachment: fixed;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Handwritten font for the soft, lovey little asides */
+.font-script {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Clips any element (and its image) into a heart shape */
+.heart-mask {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2029.6'%3E%3Cpath%20d='M23.6%200c-3.4%200-6.3%202.7-7.6%205.6C14.7%202.7%2011.8%200%208.4%200%203.8%200%200%203.8%200%208.4c0%209.4%209.5%2011.9%2016%2021.2%206.1-9.3%2016-12.1%2016-21.2C32%203.8%2028.2%200%2023.6%200z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2029.6'%3E%3Cpath%20d='M23.6%200c-3.4%200-6.3%202.7-7.6%205.6C14.7%202.7%2011.8%200%208.4%200%203.8%200%200%203.8%200%208.4c0%209.4%209.5%2011.9%2016%2021.2%206.1-9.3%2016-12.1%2016-21.2C32%203.8%2028.2%200%2023.6%200z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* Shimmering gradient text for headline moments — now warmer + rosier */
+.text-shimmer {
+  background: linear-gradient(90deg, #f6a5c0, #f5d488, #ffb6cf, #a78bfa, #f6a5c0);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 8s linear infinite;
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+}
+
+/* ── Love map ─────────────────────────────────────────────────────────────── */
+.leaflet-container {
+  background: #0a0719;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.love-pin {
+  position: relative;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+.love-pin__dot {
+  position: absolute;
+  top: 0;
+  height: 26px;
+  width: 26px;
+  border-radius: 9999px;
+  background: var(--c);
+  opacity: 0.35;
+  animation: pinpulse 2s ease-out infinite;
+}
+@keyframes pinpulse {
+  0% { transform: scale(0.6); opacity: 0.5; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.love-pin__emoji {
+  font-size: 22px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+  animation: float 4s ease-in-out infinite;
+}
+/* Heart-shaped photo pin */
+.love-pin__heart {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 42px;
+  background: var(--c);
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.55));
+  animation: float 4s ease-in-out infinite;
+}
+.love-pin__avatar {
+  position: absolute;
+  inset: 3px;
+  background-size: cover;
+  background-position: center;
+}
+.love-pin__label {
+  margin-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #cdd6ff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+.love-plane {
+  font-size: 22px;
+  filter: drop-shadow(0 0 8px rgba(245, 212, 136, 0.8));
+}
+
+.love-tip.leaflet-tooltip {
+  background: rgba(20, 14, 40, 0.92);
+  border: 1px solid rgba(246, 165, 192, 0.4);
+  border-radius: 12px;
+  color: #f6a5c0;
+  font-family: "Dancing Script", cursive;
+  font-size: 16px;
+  box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.7);
+}
+.love-tip.leaflet-tooltip::before {
+  border-top-color: rgba(246, 165, 192, 0.4);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
