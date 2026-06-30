@@ -2,6 +2,7 @@ import { story } from "@/data/story";
 import StarfieldCanvas from "@/components/StarfieldCanvas";
 import OpeningGate from "@/components/OpeningGate";
 import CuteCompanion from "@/components/CuteCompanion";
+import MusicPlayer from "@/components/MusicPlayer";
 import Hero from "@/components/Hero";
 import DualClock from "@/components/DualClock";
 import DistanceCounter from "@/components/DistanceCounter";
@@ -21,6 +22,9 @@ export default function Page() {
       {/* Luna, the little moon mascot, keeps her company */}
       <CuteCompanion />
 
+      {/* Our song — taps to play, never autoplays */}
+      <MusicPlayer />
+
       {/* The stars live behind the whole page */}
       <StarfieldCanvas />
 
@@ -30,7 +34,7 @@ export default function Page() {
         <DistanceCounter />
         <MapSection />
         <DaysTogether />
-        <MeetingCountdown />
+        {/* <MeetingCountdown /> */}
         <FaceTimeGallery />
         <ReasonsDeck />
         <LockedCard />

@@ -51,17 +51,17 @@ export const story = {
 
   // ── Hero ───────────────────────────────────────────────────────────────────
   hero: {
-    line: "I'd go to the moon and back for you.",
-    sub: "We haven't met yet. But we look at the same moon — and it's only 360 miles between us.",
+    line: "I never expected to find love again.",
+    sub: "I don't know when the shift happened, but I suddenly realized that somewhere in the quiet, I had fallen deeply in love with you.",
   },
 
   // ── Your song (optional) ───────────────────────────────────────────────────
   // Drop an mp3 in /public, e.g. "/our-song.mp3". Leave "" to hide the player.
   // NEVER autoplay — there is a play button on purpose.
   song: {
-    src: "",
-    title: "⟨song title⟩",
-    artist: "⟨artist⟩",
+    src: "/until-i-found-you.mp3",
+    title: "Until I Found You",
+    artist: "Stephen Sanchez",
   },
 
   // ── Our FaceTime story ─────────────────────────────────────────────────────
