@@ -72,13 +72,15 @@ export const story = {
     { image: "", date: "⟨month/year⟩", caption: "We watched the same movie, 360 miles apart." },
   ] as Memory[],
 
-  // ── Reasons I love you (across the border) ─────────────────────────────────
+  // ── Little notes for her (across the border) ───────────────────────────────
+  // Short heartfelt notes shown one card at a time. (Key stays `reasons` so the
+  // component keeps working — only the wording on screen says "notes".)
   reasons: [
-    "You stayed on call until 4am your time, just so I wasn't alone.",
-    "You make Bangkok feel close enough to touch.",
-    "You laugh at my jokes even through a laggy connection.",
-    "You said goodnight to the same moon I was looking at.",
-    "You chose me — across a border, across a screen — every single day.",
+    "I find myself struggling to explain why I love you, and then I realize it’s because my love for you has no reason—it is simply as natural and essential as breathing. I am just, deeply and completely, in love with you.",
+    "No matter how exhausting the world becomes, the sound of your voice is my sanctuary. It heals the heaviness of my day and fills me with a kind of energy I never knew I was capable of feeling.",
+    "I know I tease you often, but it’s only because there is something so incredibly endearing about the way you scold me. It’s my favorite way to be reminded of your passion and your focus.",
+    "My greatest joy is knowing I’ve played a part in your happiness. Your smile is the light that guides me, and I would spend every day of my life doing whatever it takes to keep that glow in your eyes.",
+    "I want to be by your side through every season, whether you are laughing or hurting. I want to be your home—a safe place where you can always return. When life gets rough, you don’t have to carry it alone; come to me, and I will always be here to hold you close and keep you warm.",
   ],
 
   // ── The locked card (unlocks on your anniversary) ──────────────────────────

@@ -18,9 +18,9 @@ export default function ReasonsDeck() {
   return (
     <section className="flex min-h-[85dvh] items-center justify-center px-6 py-20">
       <Reveal className="w-full max-w-2xl text-center">
-        <p className="mb-2 font-script text-2xl text-rose">where do i even start ♡</p>
+        <p className="mb-2 font-script text-2xl text-rose">straight from my heart ♡</p>
         <h2 className="mb-3 font-serif text-3xl text-mist sm:text-4xl">
-          Reasons I love you
+          Little notes for you
         </h2>
         <p className="mb-12 text-mist/60">across a border, across a screen.</p>
 
@@ -29,7 +29,7 @@ export default function ReasonsDeck() {
           <div className="absolute inset-x-4 -top-3 h-full -rotate-2 rounded-3xl border border-glow/15 bg-white/[0.03]" />
           <div className="absolute inset-x-2 -top-1.5 h-full rotate-1 rounded-3xl border border-rose/15 bg-white/[0.04]" />
 
-          <button onClick={next} className="group relative block w-full" aria-label="Next reason">
+          <button onClick={next} className="group relative block w-full" aria-label="Next note">
             {/* heart burst on tap */}
             <AnimatePresence>
               {burst > 0 && (
@@ -55,7 +55,7 @@ export default function ReasonsDeck() {
                 ♡
               </span>
               <span className="absolute left-6 top-5 font-script text-lg text-gold/80">
-                Reason no.{i + 1}
+                Note no.{i + 1}
               </span>
 
               <AnimatePresence mode="wait">
@@ -87,7 +87,7 @@ export default function ReasonsDeck() {
         </div>
 
         <p className="mt-8 font-script text-xl text-mist/55">
-          tap for another reason (i have endless) ♡
+          tap for another little note ♡
         </p>
       </Reveal>
     </section>
