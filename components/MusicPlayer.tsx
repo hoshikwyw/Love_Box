@@ -12,7 +12,6 @@ export default function MusicPlayer() {
   const { src, title, artist } = story.song;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
-  const [ready, setReady] = useState(false);
 
   // Keep a comfortable, in-the-background volume.
   useEffect(() => {
@@ -39,30 +38,31 @@ export default function MusicPlayer() {
   }
 
   return (
-    <div className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[calc(0.75rem+env(safe-area-inset-right))] z-40 flex items-center gap-3 sm:bottom-8 sm:right-8">
+    <div className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[calc(0.75rem+env(safe-area-inset-right))] z-40 flex flex-col items-end gap-2 sm:bottom-8 sm:right-8 sm:gap-3">
       <audio
         ref={audioRef}
         src={src}
         loop
         preload="none"
-        onCanPlay={() => setReady(true)}
         onEnded={() => setPlaying(false)}
         onPause={() => setPlaying(false)}
         onPlay={() => setPlaying(true)}
       />
 
-      {/* now-playing pill — appears once it's playing */}
+      {/* now-playing pill — sits ABOVE the button so it never collides with Luna */}
       <AnimatePresence>
         {playing && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, x: 8 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            exit={{ opacity: 0, scale: 0.8, x: 8 }}
+            initial={{ opacity: 0, scale: 0.85, y: 8 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.85, y: 8 }}
             transition={{ duration: 0.4, ease: "backOut" }}
-            className="relative rounded-2xl rounded-br-sm border border-glow/30 bg-white/[0.08] px-4 py-2 backdrop-blur-md"
+            className="relative max-w-[60vw] rounded-2xl rounded-br-sm border border-glow/30 bg-white/[0.08] px-4 py-2 backdrop-blur-md sm:max-w-none"
           >
-            <p className="font-script text-base leading-tight text-mist">{title}</p>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-mist/50">
+            <p className="truncate font-script text-base leading-tight text-mist">
+              {title}
+            </p>
+            <p className="truncate text-[11px] uppercase tracking-[0.2em] text-mist/50">
               {artist}
             </p>
           </motion.div>

@@ -66,8 +66,8 @@ export const story = {
 
   // ── Our FaceTime story ─────────────────────────────────────────────────────
   memories: [
-    { image: "", date: "⟨month/year⟩", caption: "The first time I saw your face." },
-    { image: "", date: "⟨month/year⟩", caption: "The call where you fell asleep and I just watched you breathe." },
+    { image: "/firstMet.png", date: "31 March 2026", caption: "The memory of us meeting still feels like magic. Thank you for sending that first text and sparking the most beautiful chapter of my life." },
+    { image: "/firstMove.png", date: "20 April 2026", caption: "I remember asking you to be mine, knowing your heart had been hurt before. I made a promise to protect you, and every day since, my goal has been to ensure your tears are only ever tears of joy." },
     { image: "", date: "⟨month/year⟩", caption: "Good morning for me, goodnight for you." },
     { image: "", date: "⟨month/year⟩", caption: "We watched the same movie, 360 miles apart." },
   ] as Memory[],
