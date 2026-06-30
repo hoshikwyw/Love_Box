@@ -29,7 +29,7 @@ export const story = {
     city: "Bangkok",
     timezone: "Asia/Bangkok", // UTC+7
     coords: [13.7563, 100.5018],
-    photo: "", // ← drop her photo in /public (e.g. "/memories/bee.jpg") and put the path here
+    photo: "/herpfp.jpg", // ← drop her photo in /public (e.g. "/memories/bee.jpg") and put the path here
   } as Person,
 
   you: {
@@ -37,7 +37,7 @@ export const story = {
     city: "Yangon",
     timezone: "Asia/Yangon", // UTC+6:30
     coords: [16.8409, 96.1735],
-    photo: "", // ← drop your photo in /public (e.g. "/memories/kayv.jpg") and put the path here
+    photo: "/myPfp.jpg", // ← drop your photo in /public (e.g. "/memories/kayv.jpg") and put the path here
   } as Person,
 
   // ── The dates that matter ──────────────────────────────────────────────────
@@ -68,8 +68,8 @@ export const story = {
   memories: [
     { image: "/firstMet.png", date: "31 March 2026", caption: "The memory of us meeting still feels like magic. Thank you for sending that first text and sparking the most beautiful chapter of my life." },
     { image: "/firstMove.png", date: "20 April 2026", caption: "I remember asking you to be mine, knowing your heart had been hurt before. I made a promise to protect you, and every day since, my goal has been to ensure your tears are only ever tears of joy." },
-    { image: "", date: "⟨month/year⟩", caption: "Good morning for me, goodnight for you." },
-    { image: "", date: "⟨month/year⟩", caption: "We watched the same movie, 360 miles apart." },
+    { image: "/sayYes.jpg", date: "28 April 2026", caption: "I can still hear the echo of the first time you said it. It was the sweetest melody my heart has ever played." },
+    { image: "/sheSleep.jpg", date: "16 May 2026", caption: "I find myself counting the days until our nights don't end in 'goodbye,' but in holding you close until the dawn finally breaks." },
   ] as Memory[],
 
   // ── Little notes for her (across the border) ───────────────────────────────
