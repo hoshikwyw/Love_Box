@@ -12,8 +12,8 @@ export default function CuteCompanion() {
     `${story.you.name} can't stop thinking about you`,
     "360 miles is nothing for us",
     "look at the moon tonight 🌙",
-    "you make him the happiest",
-    "psst… you're his favorite person",
+    "you make me the happiest",
+    "psst… you're my favorite person",
   ];
 
   // Each tap advances the whisper and sends up a little heart.
